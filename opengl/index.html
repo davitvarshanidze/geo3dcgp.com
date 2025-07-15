@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>კომპიუტერული გრაფიკის კურსი - OpenGL-ის შესავალი</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" type="text/css" href="styles/sample.css"/> 
+<link rel="stylesheet" type="text/css" href="styles/dhtmlwindow.css"/> 
+<link rel="stylesheet" type="text/css" href="styles/lightbox.css"/> 
+
+<script type="text/javascript" language="JavaScript1.2" src="menu/stmenu.js"></script>
+<script type="text/javascript" language="JavaScript1.2" src="javascripts/dhtmlwindow.js"></script>
+<script type="text/javascript" src="javascripts/prototype.js"></script>
+<script type="text/javascript" src="javascripts/lightbox.js"></script>
+
+<script language="javascript1.2">//<![CDATA[
+
+ var googleWin;
+ var recycleWin;
+ var mozillaWin;
+ var pingWindow;
+ 
+ function openWindow() 
+ {
+	googleWin = dhtmlwindow.open("googlebox", "iframe", "http://geogamedev.net/test/index.php", "www.google.com - Mozilla firefox" ,"left=100px,top=50px,width=560px,height=400px,resize=1,scrolling=1,center=0", "recal"); 
+ }
+ 
+function openRecycle() 
+{
+  recycleWin = dhtmlwindow.open("Recycle", "inline", "<img src='images/recyclecont.jpg'>", "Recycle Bin",  "left=100px,top=100px,width=800px,height=510px,resize=1,scrolling=1, center=0", "recal");
+}
+
+function openPing() 
+{
+  pingWindow = dhtmlwindow.open("PingWin", "inline", "<img src='images/ping.gif'>", "Console  - Ping",  "left=300px,top=300px,width=380px,height=158px,resize=0,scrolling=0, center=0", "recal");
+}
+
+function openMozilla(url) 
+{ 
+  mozillaWin = dhtmlwindow.open("googlebox", "iframe", url, url + " - Mozilla firefox", "left=100px,top=100px,width=700px,height=500px,resize=1,scrolling=1,center=0",    "recal"); 
+}
+
+function Reboot() {
+
+ if (googleWin)  googleWin.hide(); 
+ if (pingWindow) pingWindow.hide(); 
+ if (recycleWin) recycleWin.hide(); 
+ if (mozillaWin) mozillaWin.hide(); 
+  
+ hideMenu("menu14ac");
+  
+ new Lightbox.base( "box2" );  
+ 
+}
+
+//]]>	
+</script>
+</head>
+
+<body>
+
+ 
+<table width="1024" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left"><img src="menu/background2.jpg" width="1024" height="745" border="0" usemap="#Map" />
+      <map name="Map" id="Map">
+        <area shape="rect" coords="41,32,94,90" href="javascript:openWindow();" target="" alt="Run Firefox" />
+      </map>    </td>
+  </tr>
+  <tr>
+   <td align="center">
+     <script type="text/javascript" language="JavaScript1.2" src="menu/menu.js"></script>
+     <span id="winclock" name="winclock">...</span>   </td>
+  </tr>
+</table>
+
+
+<SCRIPT language="JavaScript">
+<!--
+function runClock() {
+theTime = window.setTimeout("runClock()", 1000);
+
+var a_p = "";
+var d = new Date();
+
+var curr_hour = d.getHours();
+
+if (curr_hour < 12)
+   {
+   a_p = "AM";
+   }
+else
+   {
+   a_p = "PM";
+   }
+if (curr_hour == 0)
+   {
+   curr_hour = 12;
+   }
+if (curr_hour > 12)
+   {
+   curr_hour = curr_hour - 12;
+   }
+
+var curr_min = d.getMinutes();
+
+document.getElementById("winclock").firstChild.nodeValue = curr_hour + ":" + ((curr_min<=9) ? "0" : "") + curr_min + " " + a_p;
+}
+runClock();
+-->
+</SCRIPT>
+
+<img id="boxA" class="box content"  style="left:940px;top:660px;" onClick="openRecycle(); return false"  src="images/recycle.gif" alt="Recycle Bin"  />
+
+<img id="Ping" class="box content"  style="left:132px;top:30px;" onClick="openPing(); return false" src="images/pingicon.gif" alt="ping"  />
+
+<!-- <a href="samples/OpenGL_Task1.zip"><img class="box content"  style="left:700px;top:-10px;" src="images/1sttask.gif" alt="1-ი დავალება"  /></a> -->
+
+
+<div class="box content"  style="width:220px;left:70px;top:150px;background-color:white">
+ <img src="images/devcpp.jpg" alt="devcpp" align="left" />
+ <a href="samples/OpenGL_Base.zip">ეს არის devcpp-ის მინიმალური პროექტი 
+ რომელიც შეიცავს ყველანაერ ბილიოთეკებს და არ საჭიროებს devcpp-ში FreeGlut-ის დაყენებას</a></div>
+
+<div class="box content"  style="width:220px;left:370px;top:150px;background-color:white">
+ <img src="images/vsnet.jpg" alt="devcpp" align="left" />
+ <a href="samples/freeglubase_vsnet.zip">ეს არის vs.net 2005-ის მინიმალური პროექტი 
+ რომელიც შეიცავს ყველანაერ ბილიოთეკებს</a></div>
+
+<div class="box content"  style="width:220px;left:670px;top:150px;background-color:white">
+ <a href="http://geogamedev.net/wordpress/"><strong>www.geogamedev.net</strong> - ახალი საიტი გეიმ-დეველოფინგზე ! ასევე უკვე გამოქვეყნებულია რამოდენიმე სტატია  OpenGL-ზე !</a></div>
+
+<div id="box2" class="box content" style="display:none; border-spacing:2; border:outset;">
+       <br/>
+        <center>
+        Do you really want to reboot ?<br/><br/><br/>
+         <input type="button" onClick="javascript:window.location.href='bsod.html';" border="1 solid" value="&nbsp;&nbsp;&nbsp;&nbsp;OK&nbsp;&nbsp;&nbsp;&nbsp" />			            &nbsp;&nbsp;&nbsp;
+         <input type="button" onClick="javascript:window.location.href='index.html';" border="1 solid" value=" Cancel " />
+        </center>
+        <br/>
+    </div>
+    
+</body>
+
+</html>

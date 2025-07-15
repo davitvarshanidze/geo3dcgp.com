@@ -1,0 +1,64 @@
+/* <style> */
+
+.box {
+  color: #000000;
+  padding: 0px;
+  position: absolute;
+  cursor:pointer;
+}
+
+.content {
+  padding: 1em;
+}
+
+.pageHeader 
+{
+ font-size:18px;
+ color:#336699;
+}
+
+img{
+	border: 0;
+}
+
+a.menuItem img {
+ vertical-align: middle;
+}
+
+body {
+	background: #FFF;
+	color: #222;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 12px;
+	line-height: 135%;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	background-image: url(../images/background.jpg);
+	background-repeat: repeat;
+}
+
+a.menuItem {
+  color: #000000;
+  cursor:pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dialodImg {
+  float: left;
+  margin: 5px 5px 5px 5px;
+  cursor: pointer;
+  vertical-align:middle;
+}
+
+#winclock {
+
+  position: absolute;
+  left: 980px;
+  top: 750px;
+  z-index: +1;
+  font-size:9px;
+  font-weight:200; 
+  color:white;
+}
